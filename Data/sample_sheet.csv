@@ -1,0 +1,12 @@
+RDS,Stage,Units,ClusteringResolution
+GSE158142_zf6s_cc_filt.cluster.rds,12,hpf,res.4.5
+GSE158142_zf10s_cc_filt.cluster.rds,14,hpf,res.4
+GSE158142_zf14s_cc_filt.cluster.rds,16,hpf,res.5
+GSE158142_zf18s_cc_filt.cluster.rds,18,hpf,res.5
+GSE158142_zf20hpf_cc_filt.cluster.rds,20,hpf,res.4.5
+GSE158142_zf24hpf_cc_filt.cluster.rds,24,hpf,res.5
+GSE158142_zf36hpf_cc_filt.cluster.rds,36,hpf,res.6
+GSE158142_zf2dpf_cc_filt.cluster.rds,2,dpf,res.6
+GSE158142_zf3dpf_cc_filt.cluster.rds,3,dpf,res.5
+GSE158142_zf5dpf_cc_filt.cluster.rds,5,dpf,res.5.5
+GSE158142_zf8dpf_cc_filt.cluster4.rds,8,dpf,res.6
