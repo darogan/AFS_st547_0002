@@ -44,22 +44,24 @@ Gene of interest is dlk2 (ENSDARG00000076247)
 | GSE158142_zf3dpf_cc_filt.cluster.rds  |     3 | dpf   | res.5                |
 | GSE158142_zf5dpf_cc_filt.cluster.rds  |     5 | dpf   | res.5.5              |
 | GSE158142_zf8dpf_cc_filt.cluster4.rds |     8 | dpf   | res.6                |
+| GSE158142_zf15dpf_PCAALL.rds          |    15 | dpf   | res.5                |
 
 ## Results
 
 | Sample          | DimPlot | FeaturePlot (dlk2) | AverageExpression |
 | --------------- | ----------------------------------------- | ----------- | ----------------- |
-| GSE158142_12hpf | [[PDF](Plots/Dimplot_12hpf_res.4.5.pdf )] | [[PDF](FeaturePlot_12hpf_res.4.5_dlk2.pdf)] | [[XLSX](Data/AverageExpression_12hpf_res.4.5_dlk2.xlsx)] |
-| GSE158142_14hpf | [[PDF](Plots/Dimplot_14hpf_res.4.5.pdf )] | [[PDF](FeaturePlot_14hpf_res.4_dlk2.pdf)]   | [[XLSX](Data/AverageExpression_14hpf_res.4_dlk2.xlsx)]   |
-| GSE158142_16hpf | [[PDF](Plots/Dimplot_16hpf_res.4.5.pdf )] | [[PDF](FeaturePlot_16hpf_res.5_dlk2.pdf)]   | [[XLSX](Data/AverageExpression__dlk2.xlsx)]              |
-| GSE158142_18hpf | [[PDF](Plots/Dimplot_18hpf_res.4.5.pdf )] | [[PDF](FeaturePlot_18hpf_res.5_dlk2.pdf)]   | [[XLSX](Data/AverageExpression_16hpf_res.5_dlk2.xlsx)]   |
-| GSE158142_20hpf | [[PDF](Plots/Dimplot_20hpf_res.4.5.pdf )] | [[PDF](FeaturePlot_20hpf_res.4.5_dlk2.pdf)] | [[XLSX](Data/AverageExpression_18hpf_res.5_dlk2.xlsx)]   |
-| GSE158142_24hpf | [[PDF](Plots/Dimplot_24hpf_res.4.5.pdf )] | [[PDF](FeaturePlot_24hpf_res.5_dlk2.pdf)]   | [[XLSX](Data/AverageExpression_20hpf_res.4.5_dlk2.xlsx)] |
-| GSE158142_36hpf | [[PDF](Plots/Dimplot_36hpf_res.4.5.pdf )] | [[PDF](FeaturePlot_36hpf_res.6_dlk2.pdf)]   | [[XLSX](Data/AverageExpression_36hpf_res.6_dlk2.xlsx)]   |
-| GSE158142_2dpf  | [[PDF](Plots/Dimplot_2dpf_res.4.5.pdf )]  | [[PDF](FeaturePlot_2dpf_res.6_dlk2.pdf)]    | [[XLSX](Data/AverageExpression_2dpf_res.6_dlk2.xlsx)]    |
-| GSE158142_3dpf  | [[PDF](Plots/Dimplot_3dpf_res.4.5.pdf )]  | [[PDF](FeaturePlot_3dpf_res.5_dlk2.pdf)]    | [[XLSX](Data/AverageExpression_3dpf_res.5_dlk2.xlsx)]    |
-| GSE158142_5dpf  | [[PDF](Plots/Dimplot_5dpf_res.4.5.pdf )]  | [[PDF](FeaturePlot_5dpf_res.5.5_dlk2.pdf)]  | [[XLSX](Data/AverageExpression_5dpf_res.5.5_dlk2.xlsx)]  |
-| GSE158142_8dpf  | [[PDF](Plots/Dimplot_8dpf_res.4.5.pdf )]  | [[PDF](FeaturePlot_8dpf_res.6_dlk2.pdf)]    | [[XLSX](Data/AverageExpression_8dpf_res.6_dlk2.xlsx)]    |
+| GSE158142_12hpf  | [[PDF](Plots/Dimplot_12hpf_res.4.5.pdf)] | [[PDF](Plots/FeaturePlot_12hpf_res.4.5_dlk2.pdf)] | [[XLSX](Data/AverageExpression_12hpf_res.4.5_dlk2.xlsx)] |
+| GSE158142_14hpf  | [[PDF](Plots/Dimplot_14hpf_res.4.pdf)] | [[PDF](Plots/FeaturePlot_14hpf_res.4_dlk2.pdf)]   | [[XLSX](Data/AverageExpression_14hpf_res.4_dlk2.xlsx)]   |
+| GSE158142_16hpf  | [[PDF](Plots/Dimplot_16hpf_res.5.pdf)] | [[PDF](Plots/FeaturePlot_16hpf_res.5_dlk2.pdf)]   | [[XLSX](Data/AverageExpression_16hpf_res.5_dlk2.xlsx)]              |
+| GSE158142_18hpf  | [[PDF](Plots/Dimplot_18hpf_res.5.pdf)] | [[PDF](Plots/FeaturePlot_18hpf_res.5_dlk2.pdf)]   | [[XLSX](Data/AverageExpression_18hpf_res.5_dlk2.xlsx)]   |
+| GSE158142_20hpf  | [[PDF](Plots/Dimplot_20hpf_res.4.5.pdf)] | [[PDF](Plots/FeaturePlot_20hpf_res.4.5_dlk2.pdf)] | [[XLSX](Data/AverageExpression_20hpf_res.4.5_dlk2.xlsx)]   |
+| GSE158142_24hpf  | [[PDF](Plots/Dimplot_24hpf_res.5.pdf)] | [[PDF](Plots/FeaturePlot_24hpf_res.5_dlk2.pdf)]   | [[XLSX](Data/AverageExpression_24hpf_res.5_dlk2.xlsx)] |
+| GSE158142_36hpf  | [[PDF](Plots/Dimplot_36hpf_res.6.pdf)] | [[PDF](Plots/FeaturePlot_36hpf_res.6_dlk2.pdf)]   | [[XLSX](Data/AverageExpression_36hpf_res.6_dlk2.xlsx)]   |
+| GSE158142_2dpf   | [[PDF](Plots/Dimplot_2dpf_res.6.pdf)]  | [[PDF](Plots/FeaturePlot_2dpf_res.6_dlk2.pdf)]    | [[XLSX](Data/AverageExpression_2dpf_res.6_dlk2.xlsx)]    |
+| GSE158142_3dpf   | [[PDF](Plots/Dimplot_3dpf_res.5.pdf)]  | [[PDF](Plots/FeaturePlot_3dpf_res.5_dlk2.pdf)]    | [[XLSX](Data/AverageExpression_3dpf_res.5_dlk2.xlsx)]    |
+| GSE158142_5dpf   | [[PDF](Plots/Dimplot_5dpf_res.5.5.pdf)]  | [[PDF](Plots/FeaturePlot_5dpf_res.5.5_dlk2.pdf)]  | [[XLSX](Data/AverageExpression_5dpf_res.5.5_dlk2.xlsx)]  |
+| GSE158142_8dpf   | [[PDF](Plots/Dimplot_8dpf_res.6.pdf)]  | [[PDF](Plots/FeaturePlot_8dpf_res.6_dlk2.pdf)]    | [[XLSX](Data/AverageExpression_8dpf_res.6_dlk2.xlsx)]    |
+| GSE158142_zf15dpf | [[PDF](Plots/Dimplot_15dpf_res.5.pdf)]  | [[PDF](Plots/FeaturePlot_15dpf_res.5_dlk2.pdf)]    | [[XLSX](Data/AverageExpression_15dpf_res.5_dlk2.xlsx)]    |
 
 ## Contact
 
