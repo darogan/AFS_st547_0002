@@ -1,6 +1,8 @@
 # AFS_st547_0002
 
-Stephanie Telerman ::: st547@cam.ac.uk
+Bioinformatics methods for the re-analysis of Raj et al, 2020 to accompany Telerman et al, 2023 [add paper title and DOI when available and link to Journal website]
+
+
 
 Reanalysis of:
 
@@ -23,13 +25,42 @@ https://doi.org/10.1016/j.neuron.2020.09.023
 }
 ```
 
+## Data Download from GEO
 
-## Gene
+Wget commands for downloading all the required rds files are available in [[Code/get_GSE158142_RDSFiles.sh](Code/get_GSE158142_RDSFiles.sh)]. The sample sheet containing metadata (RDS, Stage, Units, ClusteringResolution) for the Robjects was also downloaded in order to match the published annotations and resolutions for the dimensionality reduction. 
 
-Gene of interest is dlk2 (ENSDARG00000076247)
+Each GEO Robject/RDS was read into Seurat and converted to Version 3 format using `UpdateSeuratObject()`.
+
+> Example command:
+`wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE158nnn/GSE158142/suppl/GSE158142_zf10s_cc_filt.cluster.rds.gz`
+
+## Analysis Code
+
+An Rscript is provided to run the gene specific re-analysis of the single-cell data [[Code/GSE158142_explore.R ](Code/GSE158142_explore.R )]. 
+
+## Methods
+
+Reanalysis of the single-cell RNA-Seq data from Raj et al, 2020 was performed using R (v4.2.1) and R-Studio (v2022.12.+353). From the GEO data submission [[GSE158142](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158142)] the Robject files were downloaded for each time point and loaded in to Seurat (v4.3.0) [Cite Seurat - see below]. The sample sheet containing metadata (RDS, Stage, Units, ClusteringResolution) for the Robjects was also downloaded in order to match the published annotations and resolutions for the dimensionality reduction. UMAP plots at the published resulution were plotted for specific genes of interest using `FeaturePlot()`. Average expression for published clusters and resolutions were extracted using `AverageExpression()` and written to XLS format files. We have provided shell scripts and a Rscript a download and recreate the gene specific analyses via GitHub [[https://github.com/darogan/AFS_st547_0002](https://github.com/darogan/AFS_st547_0002)]. We also provide gene specific data and plot files.
+
+##### References
+
+> Seurat Reference
+
+````
+@Article{,
+  author = {Andrew Butler and Paul Hoffman and Peter Smibert and Efthymia Papalexi and Rahul Satija},
+  title = {Integrating single-cell transcriptomic data across different conditions, technologies, and species},
+  journal = {Nature Biotechnology},
+  year = {2018},
+  volume = {36},
+  pages = {411-420},
+  doi = {10.1038/nbt.4096},
+  url = {https://doi.org/10.1038/nbt.4096},
+}
+````
 
 
-## Samples
+## Sample Sheet
 
 | RDS                                   | Stage | Units | ClusteringResolution |
 |---------------------------------------|-------|-------|----------------------|
@@ -48,6 +79,8 @@ Gene of interest is dlk2 (ENSDARG00000076247)
 
 ## Results
 
+Gene of interest is dlk2 (ENSDARG00000076247), tables below refer to dlk2 however results for a wider selection of genes is available in the sub-directories (Plots/ and Data/).
+
 | Sample          | DimPlot | FeaturePlot (dlk2) | AverageExpression |
 | --------------- | ----------------------------------------- | ----------- | ----------------- |
 | GSE158142_12hpf  | [[PDF](Plots/Dimplot_12hpf_res.4.5.pdf)] | [[PDF](Plots/FeaturePlot_12hpf_res.4.5_dlk2.pdf)] | [[XLSX](Data/AverageExpression_12hpf_res.4.5_dlk2.xlsx)] |
@@ -65,4 +98,5 @@ Gene of interest is dlk2 (ENSDARG00000076247)
 
 ## Contact
 
-Russell Hamilton ::: darogan@gmail.com
+Bioinformatics ::: Russell Hamilton ::: darogan@gmail.com
+Main Paper ::: Stephanie Telerman ::: st547@cam.ac.uk

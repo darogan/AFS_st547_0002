@@ -9,7 +9,7 @@ library("useful")
 library("openxlsx")
 library("readxl")
 
-baseDir <- "/Users/rhamilto/Library/CloudStorage/OneDrive-Personal/CTR-MBP/Documents/AFS-Projects/AFS_st547_0002/"
+baseDir <- "AFS_st547_0002/"
 setwd(baseDir)
 
 sample_sheet <- read.csv(paste0(baseDir, "Data/",  "sample_sheet.csv"), header=T)
@@ -59,12 +59,15 @@ runTimePoint <- function(RDS, RESOLUTION, TITLE, GENE){
 
 
 #Dlk1 (gene ID: CABZ01102109.1)
+
+# ISSUES WITH "jag2a", "ctn1a","ctn3a",
+
 genes <- c("dlk2",
            "dla", "dlb", "dlc", "dld", "dll4",
-           "jag1a", "jag1b", "jag2a", "jag2b",
+           "jag1a", "jag1b",  "jag2b",
            "mdm2", "numb", "egfl7", "ybx1", "thbs2a","mfap2",
            "notch1a", "notch1b", "notch2", "notch3",
-           "CABZ01102109.1", "ctn1a", "mfap5", "ctn3a", "dner", "jag2a")
+           "CABZ01102109.1",  "mfap5",  "dner")
 length(genes)
 
 
@@ -89,37 +92,38 @@ length(genes)
 
 
 
-ave.exp <- runTimePoint( sample_sheet[12,c("RDS")], 
-                         sample_sheet[12,c("ClusteringResolution")], 
-                         paste0(sample_sheet[12,c("Stage")], sample_sheet[i,c("Units")]), 
-                         "mfap5")
+# ave.exp <- runTimePoint( sample_sheet[12,c("RDS")], 
+#                          sample_sheet[12,c("ClusteringResolution")], 
+#                          paste0(sample_sheet[12,c("Stage")], sample_sheet[i,c("Units")]), 
+#                          "mfap5")
+# 
+# ave.exp <- runTimePoint( sample_sheet[12,c("RDS")], 
+#                          sample_sheet[12,c("ClusteringResolution")], 
+#                          paste0(sample_sheet[12,c("Stage")], sample_sheet[i,c("Units")]), 
+#                          "jag2b")
 
-ave.exp <- runTimePoint( sample_sheet[12,c("RDS")], 
-                         sample_sheet[12,c("ClusteringResolution")], 
-                         paste0(sample_sheet[12,c("Stage")], sample_sheet[i,c("Units")]), 
-                         "jag2b")
 
+for(i in 1:length(genes))
+   {
+     message(genes[i])
+     inputfiles <- list.files(paste0(baseDir, "/Data"), pattern = paste0("AverageExpression.*", genes[i]), full.names=T)
+     print(inputfiles)
 
-# for(i in 1:length(genes)) 
-#    {
-#      inputfiles <- list.files(paste0(baseDir, "/Data"), pattern = paste0("AverageExpression.*", genes[i]), full.names=T)
-#      print(inputfiles)
-#      
-#      df.list    <- lapply(inputfiles ,function(x) read_excel(x))
-#      
-#      wb <- createWorkbook()
-#      
-#      for(j in 1:length(inputfiles)) 
-#      {
-#        fname <- basename(inputfiles[j])
-#        fname <- gsub("AverageExpression_", "", fname)
-#        fname <- gsub(".xlsx",              "", fname)
-#        
-#        addWorksheet(wb, fname)
-#        writeData(wb, fname, df.list[j])
-#      }
-#      saveWorkbook(wb, file = paste0("Data/CombinedAverageExpression_", genes[i], ".xlsx"), overwrite = TRUE)
-#    }
+     df.list    <- lapply(inputfiles ,function(x) read_excel(x))
+
+     wb <- createWorkbook()
+
+     for(j in 1:length(inputfiles))
+     {
+       fname <- basename(inputfiles[j])
+       fname <- gsub("AverageExpression_", "", fname)
+       fname <- gsub(".xlsx",              "", fname)
+
+       addWorksheet(wb, fname)
+       writeData(wb, fname, df.list[j])
+     }
+     saveWorkbook(wb, file = paste0("Data/CombinedAverageExpression_", genes[i], ".xlsx"), overwrite = TRUE)
+   }
 
 
 
