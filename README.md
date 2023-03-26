@@ -32,6 +32,7 @@ Wget commands for downloading all the required rds files are available in [[Code
 Each GEO Robject/RDS was read into Seurat and converted to Version 3 format using `UpdateSeuratObject()`.
 
 > Example command:
+
 `wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE158nnn/GSE158142/suppl/GSE158142_zf10s_cc_filt.cluster.rds.gz`
 
 ## Analysis Code
