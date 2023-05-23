@@ -2,6 +2,18 @@
 
 Bioinformatics methods for the re-analysis of Raj et al, 2020 and zebrafish tracking scripts to accompany Telerman et al, 2023 [add paper title and DOI when available and link to Journal website]
 
+Stephanie B. Telerman<sup>1</sup>, Russell S, Hamilton<sup>1</sup>, Ben Shaw<sup>1</sup>, Jordan D. Dimitrov<sup>2</sup>, Ben Steventon<sup>1</sup> & Anne.C Ferguson-Smith<sup>1,*</sup> (2023) Post-translational regulation of the Numb/Notch pathway in neurogenesis and cancer by Dlk2 
+
+> ADD DOI LINKS ONCE AVAILABLE
+
+<sub>
+<sup>1</sup> Department of Genetics, University of Cambridge, CB2 3EH Cambridge, United Kingdom
+<sup>2</sup> Centre de Recherche des Cordeliers, INSERM, CNRS, Sorbonne Université, Université Paris Cité, 75006 Paris, France
+<sup>*</sup> Corresponding author
+</sub>
+
+
+
 ## Zebra Fish Tracking
 
 Tracking, recording, and data acquisition of larval (vibration startle and light/dark cycles assays) were done using the Zantiks MWP unit (Zantiks limited, Cambridge UK). The detailed scripts of the experimental setups for both experiments are available below. 
