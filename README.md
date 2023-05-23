@@ -1,9 +1,17 @@
 # AFS_st547_0002
 
-Bioinformatics methods for the re-analysis of Raj et al, 2020 to accompany Telerman et al, 2023 [add paper title and DOI when available and link to Journal website]
+Bioinformatics methods for the re-analysis of Raj et al, 2020 and zebrafish tracking scripts to accompany Telerman et al, 2023 [add paper title and DOI when available and link to Journal website]
 
+## Zebra Fish Tracking
 
+Tracking, recording, and data acquisition of larval (vibration startle and light/dark cycles assays) were done using the Zantiks MWP unit (Zantiks limited, Cambridge UK). The detailed scripts of the experimental setups for both experiments are available below. 
 
+### Tracking Scripts
+
+1. [[light_dark_transitions](Tracking/light_dark_transitions_zoom_21st.zs)]
+2. [[vibration_protocol_zoom_21st](Tracking/vibration_protocol_zoom_21st.zs)]
+
+## Single Cell RNA-Seq
 Reanalysis of:
 
 Raj et al. (2020) Emergence of Neuronal Diversity during Vertebrate Brain Development. Neuron, 108:6, 1058--1074.e6
@@ -25,7 +33,7 @@ https://doi.org/10.1016/j.neuron.2020.09.023
 }
 ```
 
-## Data Download from GEO
+### Data Download from GEO
 
 Wget commands for downloading all the required rds files are available in [[Code/get_GSE158142_RDSFiles.sh](Code/get_GSE158142_RDSFiles.sh)]. The sample sheet containing metadata (RDS, Stage, Units, ClusteringResolution) for the Robjects was also downloaded in order to match the published annotations and resolutions for the dimensionality reduction. 
 
@@ -35,17 +43,15 @@ Each GEO Robject/RDS was read into Seurat and converted to Version 3 format usin
 
 `wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE158nnn/GSE158142/suppl/GSE158142_zf10s_cc_filt.cluster.rds.gz`
 
-## Analysis Code
+### Analysis Code
 
 An Rscript is provided to run the gene specific re-analysis of the single-cell data [[Code/GSE158142_explore.R ](Code/GSE158142_explore.R )]. 
 
-## Methods
+### Methods
 
 Reanalysis of the single-cell RNA-Seq data from Raj et al, 2020 was performed using R (v4.2.1) and R-Studio (v2022.12.+353). From the GEO data submission [[GSE158142](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE158142)] the Robject files were downloaded for each time point and loaded in to Seurat (v4.3.0) [Cite Seurat - see below]. The sample sheet containing metadata (RDS, Stage, Units, ClusteringResolution) for the Robjects was also downloaded in order to match the published annotations and resolutions for the dimensionality reduction. UMAP plots at the published resulution were plotted for specific genes of interest using `FeaturePlot()`. Average expression for published clusters and resolutions were extracted using `AverageExpression()` and written to XLS format files. We have provided shell scripts and a Rscript a download and recreate the gene specific analyses via GitHub [[https://github.com/darogan/AFS_st547_0002](https://github.com/darogan/AFS_st547_0002)]. We also provide gene specific data and plot files.
 
-##### References
-
-> Seurat Reference
+### Seurat Reference
 
 ````
 @Article{,
@@ -61,7 +67,7 @@ Reanalysis of the single-cell RNA-Seq data from Raj et al, 2020 was performed us
 ````
 
 
-## Sample Sheet
+### Sample Sheet
 
 | RDS                                   | Stage | Units | ClusteringResolution |
 |---------------------------------------|-------|-------|----------------------|
@@ -78,7 +84,7 @@ Reanalysis of the single-cell RNA-Seq data from Raj et al, 2020 was performed us
 | GSE158142_zf8dpf_cc_filt.cluster4.rds |     8 | dpf   | res.6                |
 | GSE158142_zf15dpf_PCAALL.rds          |    15 | dpf   | res.5                |
 
-## Results
+### Results
 
 Gene of interest is dlk2 (ENSDARG00000076247), tables below refer to dlk2 however results for a wider selection of genes is available in the sub-directories (Plots/ and Data/).
 
@@ -97,7 +103,7 @@ Gene of interest is dlk2 (ENSDARG00000076247), tables below refer to dlk2 howeve
 | GSE158142_8dpf   | [[PDF](Plots/Dimplot_8dpf_res.6.pdf)]  | [[PDF](Plots/FeaturePlot_8dpf_res.6_dlk2.pdf)]    | [[XLSX](Data/AverageExpression_8dpf_res.6_dlk2.xlsx)]    |
 | GSE158142_zf15dpf | [[PDF](Plots/Dimplot_15dpf_res.5.pdf)]  | [[PDF](Plots/FeaturePlot_15dpf_res.5_dlk2.pdf)]    | [[XLSX](Data/AverageExpression_15dpf_res.5_dlk2.xlsx)]    |
 
-## Contact
+# Contact
 
 Bioinformatics ::: Russell Hamilton ::: darogan@gmail.com
 Main Paper ::: Stephanie Telerman ::: st547@cam.ac.uk
